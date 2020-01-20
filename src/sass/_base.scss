@@ -90,6 +90,29 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 30px;
     padding-top: 105px;
+    position: relative;
+}
+
+.intro::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: "";
+    display: block;
+    background: url("../assets/images/bg-pattern-intro-right-desktop.svg") no-repeat;
+    pointer-events: none;
+    background-position: right -80px;
+    width: 100%;
+    height: 100%;
+}
+
+.intro::before {
+    position: absolute;
+    left: 0;
+    content: url("../assets/images/bg-pattern-intro-left-desktop.svg");
+    pointer-events: none;
+    display: block;
+    transform: translateY(84%);
 }
 
 .intro__heading {
@@ -109,7 +132,7 @@ body {
     display: block;
     width: 150px;
     background: $accent_light;
-    height: 1px;    
+    height: 1px;
     margin-top: -64px;
 }
 
@@ -132,22 +155,212 @@ body {
     vertical-align: top;
 }
 
-@media screen and (max-width: 1020px) {
-    body {
-        /* This is when it looks bad before mobile */
-    }
+/****************** Features Section ************************/
+
+.features {
+    padding: 207px 165px 150px 165px;
 }
 
-@media screen and (max-width: $mobile_width) {
-    body {
-    }
+.features__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 26px;
 }
+
+.features__heading {
+    font-family: "DM Serif Display";
+    font-weight: normal;
+    font-size: 74px;
+    letter-spacing: -0.027em;
+    line-height: 64px;
+    color: $accent_dark;
+    margin-bottom: 98px;
+}
+
+.features__heading::before {
+    display: block;
+    content: "";
+    width: 150px;
+    background: hsl(291, 8, 67);
+    height: 1px;
+    margin-top: 48px;
+    margin-bottom: 63px;
+}
+
+.features__card {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    color: hsl(240, 0, 58);
+}
+
+.features__card_heading {
+    font-family: "DM Serif Display";
+    font-weight: normal;
+    font-size: 26px;
+    letter-spacing: 0.022em;
+    line-height: 26px;
+    margin-bottom: 22px;
+    color: hsl(264, 6, 15);
+}
+
+.features__card_body {
+    font-family: Karla;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.07em;
+    line-height: 26px;
+    color: $accent_mid;
+}
+
+.features__icon {
+    order: -1;
+    margin-bottom: 36px;
+}
+
+.how-we-work {
+    width: 100%;
+    background: $primary_dark;
+    margin-top: 145px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 60px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.how-we-work::after {
+    content: url("../assets/images/bg-pattern-how-we-work-desktop.svg");
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.how-we-work_heading {
+    font-family: "DM Serif Display", serif;
+    font-size: 55px;
+    line-height: 55px;
+    padding: 70px 128px 70px 78px;
+    color: white;
+}
+
+.how-we-work .button {
+    position: relative;
+    z-index: 1;
+}
+
+/****************** Footer Section ************************/
+
+.page-footer {
+    width: 100%;
+    background: $accent_light;
+    position: relative;
+    color: $accent_mid;
+}
+
+.page-footer::before {
+    content: url("../assets/images/bg-pattern-footer-desktop.svg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.footer_header {
+    padding: 60px 165px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.footer_header::after {
+    content: "";
+    display: block;
+    width: calc(100% - 165px * 2);
+    background: $accent_mid;
+    height: 1px;
+    position: absolute;
+    bottom: 25px;
+}
+
+.social__links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    align-items: center;
+}
+
+.social-link-icon:hover path {
+    fill: $accent_dark;
+}
+
+.footer_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0 165px 64px;
+    text-transform: uppercase;
+}
+
+.site-link-header {
+    position: relative;
+    font-family: Karla;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    color: $accent_mid;
+    z-index: 1;
+}
+
+.site-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list-item-link {
+    padding: 4px 0;
+}
+
+.site_link {
+    color: $accent_dark;
+    text-decoration: none;
+    font-family: Karla;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    line-height: 1px;
+    text-align: left;
+    color: #2b272f;
+}
+
+.site_link:hover {
+    text-decoration: underline;
+}
+
+/****************** Device and Screen size settings ************************/
+
+// @media screen and (max-width: 1020px) {
+//     body {
+//         /* This is because it looks bad before we get to mobile devices */
+//     }
+// }
+
+// @media screen and (max-width: $mobile_width) {
+//     body {
+//     }
+// }
 
 /* Added for Frontend Mentor attribution */
 .attribution {
     font-size: 11px;
     text-align: center;
-    display: none; /* Remove when complete. */
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
