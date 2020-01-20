@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Serif+Display|Karla:400,700");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-size: 16px;
+  letter-spacing: 0.002em;
+  word-spacing: 0.025em;
+  line-height: 1.35em;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
+
+html {
+  font-family: sans-serif;
+  color: #323232;
+  width: 100%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  background: whitesmoke;
+  margin: 0;
+  padding: 0;
+}
+
+small {
+  font-size: 0.75rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  margin-bottom: 2rem;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 4.6rem;
+  line-height: 4.6rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+  line-height: 3.6rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+}
+
+h6 {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+a[href],
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: baseline;
+}
+
+[hidden] {
+  display: none;
+}
+
+/* accessibility */
+/* Remove all animations and transitions */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  display: grid;
+  grid-auto-columns: 1fr;
+  color: #2b272f;
+  background: white;
+}
+
+.container {
+  margin: 0 auto;
+  justify-self: center;
+  width: 100%;
+  max-width: 1440px;
+}
+
+.button {
+  font-family: Karla, sans-serif;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #2d2640;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 26px;
+  border: 1px solid #2d2640;
+  letter-spacing: 0.07em;
+}
+
+.light {
+  color: #fafafa;
+  border-color: #fafafa;
+}
+
+.dark {
+  color: #2d2640;
+  border-color: #2d2640;
+}
+
+.dark:hover {
+  background: #2d2640;
+  color: #fafafa;
+}
+
+.light:hover {
+  background: #fafafa;
+  color: #2d2640;
+}
+
+/****************** Page header ************************/
+.page-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 9999;
+  text-transform: uppercase;
+  padding: 22px 166px 18px;
+}
+
+.head__nav {
+  color: #837d87;
+}
+
+.head__nav_link {
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.007em;
+  text-decoration: none;
+  color: #837d87;
+  padding: 8px;
+}
+
+.head__nav_link:nth-child(3) {
+  padding-right: 30px;
+}
+
+.head__nav_link:hover {
+  color: #2b272f;
+}
+
+/****************** Intro Section ************************/
+.intro {
+  background: #2d2640;
+  width: 100%;
+  color: #fff;
+  padding: 0 165px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 30px;
+  padding-top: 105px;
+}
+
+.intro__heading {
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 74px;
+  letter-spacing: -0.03em;
+  line-height: 64px;
+  margin: 64px 10px 28px 0;
+  position: relative;
+}
+
+.intro__heading::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 150px;
+  background: #fafafa;
+  height: 1px;
+  margin-top: -64px;
+}
+
+.intro__body {
+  font-family: Karla;
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  line-height: 26px;
+  color: #fff;
+  margin-bottom: 2.2em;
+}
+
+.intro-img {
+  margin-top: 105px;
+}
+
+.intro-img img {
+  margin: -105px 0;
+  vertical-align: top;
+}
+
+@media screen and (max-width: 1020px) {
+  body {
+    /* This is when it looks bad before mobile */
+  }
+}
+
+/* Added for Frontend Mentor attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  display: none;
+  /* Remove when complete. */
+}
+
+.attribution a {
+  color: #3e52a3;
+}

@@ -1,0 +1,154 @@
+body {
+    display: grid;
+    grid-auto-columns: 1fr;
+    color: $accent_dark;
+    background: white;
+}
+
+.container {
+    margin: 0 auto; // legacy
+    justify-self: center;
+    width: 100%;
+    max-width: 1440px;
+}
+
+.button {
+    font-family: Karla, sans-serif;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    color: $primary_dark;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 26px;
+    border: 1px solid $primary_dark;
+    letter-spacing: 0.07em;
+}
+
+.light {
+    color: $accent_light;
+    border-color: $accent_light;
+}
+
+.dark {
+    color: $primary_dark;
+    border-color: $primary_dark;
+}
+
+.dark:hover {
+    background: $primary_dark;
+    color: $accent_light;
+}
+
+.light:hover {
+    background: $accent_light;
+    color: $primary_dark;
+}
+
+/****************** Page header ************************/
+
+.page-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 9999;
+    text-transform: uppercase;
+    padding: 22px 166px 18px;
+}
+
+.head__nav {
+    color: $accent_mid;
+}
+
+.head__nav_link {
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.007em;
+    text-decoration: none;
+    color: $accent_mid;
+    padding: 8px;
+}
+
+.head__nav_link:nth-child(3) {
+    padding-right: 30px;
+}
+
+.head__nav_link:hover {
+    color: $accent_dark;
+}
+
+/****************** Intro Section ************************/
+
+.intro {
+    background: $primary_dark;
+    width: 100%;
+    color: #fff;
+    padding: 0 165px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+    padding-top: 105px;
+}
+
+.intro__heading {
+    font-family: "DM Serif Display";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 74px;
+    letter-spacing: -0.03em;
+    line-height: 64px;
+    margin: 64px 10px 28px 0;
+    position: relative;
+}
+
+.intro__heading::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 150px;
+    background: $accent_light;
+    height: 1px;    
+    margin-top: -64px;
+}
+
+.intro__body {
+    font-family: Karla;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    line-height: 26px;
+    color: #fff;
+    margin-bottom: 2.2em;
+}
+
+.intro-img {
+    margin-top: 105px;
+}
+
+.intro-img img {
+    margin: -105px 0;
+    vertical-align: top;
+}
+
+@media screen and (max-width: 1020px) {
+    body {
+        /* This is when it looks bad before mobile */
+    }
+}
+
+@media screen and (max-width: $mobile_width) {
+    body {
+    }
+}
+
+/* Added for Frontend Mentor attribution */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    display: none; /* Remove when complete. */
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
